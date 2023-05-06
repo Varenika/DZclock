@@ -1,0 +1,56 @@
+.clock {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background-color: #bbbbbb;
+  position: relative;
+  left: 5%;
+  top: 20px;
+}
+
+.circle {
+  height: 180px;
+  width: 180px;
+  border-radius: 50%;
+  background-color: #333;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  
+}
+
+.hour, .minute {
+  width: 2px;
+  position: absolute;
+  transform-origin: bottom center;
+  animation-name: rotate;
+  animation-timing-function: linear; /*одинаково-линейно*/
+  animation-iteration-count: infinite; /*бесконечно*/
+}
+
+.hour {
+  height: 60px;
+  left: 99px;
+  top: 40px;
+  background-color: #a5a4a4;
+  animation-duration: 120s;  /*для наглядности вместо 3600сек*/
+}
+
+.minute {
+  height: 75px;
+  left: 99px;
+  top: 25px;
+  background-color: #e2e0e0;
+  animation-duration: 20s; /*для наглядности вместо 60сек*/
+}  
+
+/*анимация*/
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
